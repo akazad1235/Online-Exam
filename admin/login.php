@@ -17,6 +17,16 @@ if ($_SERVER['REQUEST_METHOD']=='POST') {
 <div class="adminlogin">
 	<form action="" method="post">
 		<table>
+		<tr>
+				<td colspan='2'>
+					<?php
+					if (isset($adminData)) {
+						echo $adminData;
+					}
+					?>
+				</td>
+				
+			</tr>
 			<tr>
 				<td>Username</td>
 				<td><input type="text" name="admin_user"/></td>
@@ -29,16 +39,7 @@ if ($_SERVER['REQUEST_METHOD']=='POST') {
 				<td></td>
 				<td><input type="submit" name="login" value="Login"/></td>
 			</tr>
-			<tr>
-				<td colspan='2'>
-					<?php
-					if (isset($adminData)) {
-						echo $adminData;
-					}
-					?>
-				</td>
-				
-			</tr>
+			
 		</table>
 	</form>
 </div>

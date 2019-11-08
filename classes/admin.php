@@ -27,11 +27,11 @@ class Admin{
              Session::init();
              Session::set("adminLogin", Ture);
              Session::set("adminUser", $value['adminUser']);
-             Session::set("adminLogin", $value['adminPass']);
+             Session::set("adminPass", $value['adminPass']);
              header("Location:index.php");
              
          }else{
-             $msg="<span class='error'>usernaem or password not match</span>";
+             $msg="<span class='error'>Username or Password not match</span>";
              return $msg;
          }
 
